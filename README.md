@@ -1,6 +1,6 @@
 # Flying Co-Stereo
 
-This is the repository that contains source code for the [Flying Co-Stereo website](https://xingxingzuo.github.io/flying_co_stereo).
+This is the project webpage for the [Flying Co-Stereo website](https://xingxingzuo.github.io/flying_co_stereo).
 
 If you find Flying Co-Stereo useful for your work please cite:
 ```
