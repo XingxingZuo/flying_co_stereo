@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline.">
+  <meta name="keywords" content="Flying Robots, Collaborative Visual Mapping, Dynamic Stereo Baseline, Long-Range Dense Mapping">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6PYDPEBZZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-L6PYDPEBZZ');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://xingxingzuo.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://xingxingzuo.github.io/gaussian_lic">
+              Gaussian-LIC
+            </a>
+            <a class="navbar-item" href="https://xingxingzuo.github.io/fmgs">
+              FMGS
+            </a>
+            <a class="navbar-item" href="https://yingyexin.github.io/simplemapping.html">
+              SimpleMapping
+            </a>
+            <a class="navbar-item" href="https://shengyuh.github.io/dynfl">
+              DyNFL
+            </a>
+            <a class="navbar-item" href="https://xingxingzuo.github.io/nerfvo">
+              NerfVO
+            </a>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered is-two-thirds"><!-- 新增列宽控制 -->
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a>Zhaoying Wang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://xingxingzuo.github.io/">Xingxing Zuo</a><sup>2*</sup>,</span> <!-- 添加星号 -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=hbaEVRMAAAAJ&hl=en">Wei Dong</a><sup>1*</sup> <!-- 添加星号 -->
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>&nbsp
+              <span class="author-block"><sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI)</span><br>
+              <span class="author-block"><sup>*</sup>Corresponding authors with equal advising.</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2025.coming_soon"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/xxx"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <span class="link-block">
+                  <a href="#project-video" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!--加一个motivation，说明单机感知距离近，双机可以一下子拓展距离-->
+<section class="section">
+<style>
+  .data-highlight {
+    color: #2665cb;
+    font-weight: 600;
+    background-color: rgba(38, 101, 203, 0.15);
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+  
+  .percent-highlight {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #37c7ec;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+  }
+</style>
+
+<!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half"> <!-- 从 is-four-fifths 调整为 is-two-thirds -->
+        <!-- TL;DR 突出显示区域 -->
+        <!-- <div class="notification is-info has-text-weight-bold mb-6" style="font-size: 0.92rem;">
+             style="background-color: #f0f9f8; 
+                    border-left: 4px solid #2bb9b0;
+                    color: #0a5449;">
+
+          <span class="icon is-large">
+            <i class="fas fa-bolt"></i>
+          </span>
+          <strong>TL;DR:</strong> 
+          This work introduces <strong>Flying Co-Stereo</strong>, a collaborative stereo vision system that establishes dynamic wide-baseline configurations using two UAVs for large-scale, long-range dense mapping.
+        </div> -->
+
+        <div class="notification has-text-weight-bold mb-6" 
+           style="background: linear-gradient(135deg, #f5f9ff 0%, #e1edff 100%);
+                  border-left: 4px solid #002D72; font-size: 0.92rem;">
+        <div class="is-flex is-align-items-center">
+          <span class="icon is-large mr-3" style="color: #0072CE;">
+            <i class="fas fa-bolt"></i>
+          </span>
+          <div>
+            <strong style="color: #002D72;">TL;DR:</strong> 
+            <span style="display: inline; white-space: normal; color: #333;">
+              This work introduces <strong style="color: #002D72;">Flying Co-Stereo</strong>, 
+              a collaborative stereo vision system that establishes dynamic wide-baseline configurations using two UAVs for large-scale, long-range dense mapping.
+            </span>
+          </div>
+        </div>
+        </div>
+
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            For Unmanned Aerial Vehicle (UAV) swarms operating in large-scale unknown environments, lightweight long-range mapping is crucial for enhancing safe navigation. Traditional stereo cameras constrained by a short fixed baseline suffer from limited perception ranges. To overcome this limitation, we present <strong>Flying Co-Stereo</strong>, a cross-agent collaborative stereo vision system that leverages the wide-baseline spatial configuration of two UAVs for long-range dense mapping.
+            However, realizing this capability presents several challenges. First, the independent motion of each UAV leads to a dynamic and continuously changing stereo baseline, making accurate and robust estimation difficult. Second, efficiently establishing feature correspondences across independently moving viewpoints is constrained by the limited computational capacity of onboard edge devices. 
+          </p>
+          <p>
+            To tackle these challenges, we introduce the <strong>Flying Co-Stereo</strong> system within a novel <strong>Collaborative Dynamic-Baseline Stereo Mapping (CDBSM)</strong> framework. We first develop a dual-spectrum visual-inertial-ranging estimator to achieve robust and precise online estimation of the baseline between the two UAVs. In addition, we propose a hybrid feature association strategy that integrates cross-agent feature matching—based on a computationally intensive yet accurate deep neural network—with intra-agent, optical-flow-based lightweight feature tracking. Furthermore, benefiting from the wide baselines between the two UAVs, our system accurately recovers long-range co-visible 3D sparse points. We then employ a monocular depth network to predict up-to-scale dense depth maps, which are refined using accurate metric scales derived from the triangulated sparse points via exponential fitting.
+          </p>
+          <p>
+            Extensive real-world experiments demonstrate that the proposed <strong>Flying Co-Stereo</strong> system achieves robust and accurate dynamic baseline estimation in complex environments while maintaining efficient feature matching with resource-constrained computers under varying viewpoints. Ultimately, our system achieves <span class="data-highlight">dense 3D mapping at distances of up to 70 meters</span> with a relative error between <span class="percent-highlight">2.3% and 9.7%</span>. This corresponds to <span class="percent-highlight">up to a 350% improvement </span>in maximum perception range and <span class="percent-highlight">up to a 450% increase </span>in coverage area compared to conventional stereo vision systems with fixed compact baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper image. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half"> <!-- 从 is-four-fifths 调整为 is-two-thirds -->
+        <!-- <h2 class="title is-3">System Overview</h2> -->
+        <h2 class="title is-3 title-underline">System Overview</h2>
+        
+        <div class="card mt-3 spaced-card"> <!-- 减少卡片上方边距 -->
+          <div class="card-image">
+            <figure class="image is-wide">
+              <img 
+                src="./static/images/system-pipeline-v6.png" 
+                alt="System Overview" 
+                style="object-fit: contain;" 
+              >
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content has-text-centered">
+              <p><em>The system architecture of Flying Co-Stereo within our proposed Collaborative Dynamic-Baseline Stereo Mapping framework.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+    <style>
+      .is - wide {
+        position: relative;
+        padding - top: 20%; /* 根据图片宽高比调整这个值 */
+      }
+      .is - wide figure {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+
+    <style>
+      /* 标题下添加与图片等宽的横线 */
+      .title-underline {
+        position: relative;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem; /* 减少底部边距 */
+      }
+      
+      .title-underline::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* 与父元素等宽 */
+        height: 3px;
+        background-color: #2665cb; /* 横线颜色 */
+      }
+      
+      /* 增加卡片间距 */
+      .spaced-card {
+        margin-bottom: 3rem;
+      }
+    </style>
+
+
+
+        <!-- realflight image. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half-desktop">
+        <h2 class="title is-3 title-underline">Field test of Co-Stereo</h2>
+        <div class="card mt-3 spaced-card"> 
+          <div class="card-image">
+            <figure class="image is-wide">
+              <img 
+                src="./static/images/real-flight-coding-18.gif" 
+                alt="Flying Co-Stereo" 
+                style="object-fit: contain;" 
+              >
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- realflight image. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half">
+        <h2 class="title is-3 title-underline">Results visualization</h2>
+        
+        <div class="card mt-3 spaced-card"> 
+          <div class="card-image">
+            <figure class="image is-wide">
+              <img 
+                src="./static/images/dense-mapping-coding-18.gif" 
+                alt="Results Visualization" 
+                style="object-fit: contain;" 
+              >
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- image MVS Comparison. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-half">
+      <!-- <h2 class="title is-3">Comparison With MVS</h2> -->
+      <h2 class="title is-3 title-underline">Comparison with MVS</h2>
+      
+      <div class="card mt-3 spaced-card"> <!-- 减少卡片上方边距 -->
+        <div class="card-image">
+          <figure class="image is-wide">
+            <img 
+              src="./static/images/MVS_comparison-v3.png" 
+              alt="Comparison With MVS" 
+              style="object-fit: contain;" 
+            >
+          </figure>
+        </div>
+        <div class="card-content">
+        <div class="content has-text-centered">
+          <p><em>Comparison of reconstruction from 
+            <a href="https://nianticlabs.github.io/mvsanywhere/" target="_blank">MVSAnywhere</a>, 
+            <a href="https://nianticlabs.github.io/simplerecon/" target="_blank">SimpleRecon</a>, 
+            with our proposed CDBSM, shown alongside ground truth.</em></p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paper video. -->
+  <div id="project-video" class="columns is-centered has-text-centered">
+    <div class="column is-half">
+      <!-- <h2 class="title is-3">Video</h2> -->
+      <h2 class="title is-3 title-underline">Video with narration</h2>
+      <!-- <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div> -->
+        <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/Flying-Co-Stereo-with-music-word-author-university-crf-16.mp4"
+                  type="video/mp4">
+        </video>
+    </div>
+  </div>
+  <!--/ Paper video. -->
+
+
+  <div id="BibTeX" class="columns is-centered ">
+    <div class="column is-half">
+    <h2 class="title is-3 title-underline">BibTeX</h2>
+    <pre><code>
+      Coming_soon...
+      @article{Wang2025FlyingCoStereo,
+      author    = {Zhaoying Wang, Xingxing Zuo and Wei Dong},
+      title     = {Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline},
+      journal   = {arXiv},
+      year      = {2025},
+        }
+      </code>
+    </pre>
+  </div>
+  </div>
+
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">
+            nerfies</a>.
+          </p>
+          <!-- <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
