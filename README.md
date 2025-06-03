@@ -4,11 +4,10 @@ This is the project webpage for the [Flying Co-Stereo website](https://xingxingz
 
 If you find Flying Co-Stereo useful for your work please cite:
 ```
-Coming_soon...
 @article{Wang2025FlyingCoStereo,
 author    = {Zhaoying Wang, Xingxing Zuo and Wei Dong},
 title     = {Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline},
-journal   = {arXiv},
+journal   = {arXiv preprint arXiv:2506.00546},
 year      = {2025},
 }
 ```
