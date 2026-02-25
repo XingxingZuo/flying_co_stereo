@@ -1,14 +1,20 @@
 # Flying Co-Stereo
+Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline
+Published in IEEE Transactions on Robotics (T-RO), 2026
+[Paper](https://ieeexplore.ieee.org/document/11364195)
 
-This is the project webpage for the [Flying Co-Stereo website](https://xingxingzuo.github.io/flying_co_stereo).
+This is the project webpage for [Flying Co-Stereo website](https://xingxingzuo.github.io/flying_co_stereo).
+
 
 If you find Flying Co-Stereo useful for your work please cite:
 ```
-@article{Wang2025FlyingCoStereo,
-author    = {Zhaoying Wang, Xingxing Zuo and Wei Dong},
-title     = {Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline},
-journal   = {arXiv preprint arXiv:2506.00546},
-year      = {2025},
+@article{Wang2026FlyingCoStereo,
+  author    = {Zhaoying Wang and Xingxing Zuo and Wei Dong},
+  title     = {Flying Co-Stereo: Enabling Long-Range Aerial Dense Mapping via Collaborative Stereo Vision of Dynamic-Baseline},
+  journal   = {IEEE Transactions on Robotics},
+  volume    = {42},
+  pages     = {951--970},
+  year      = {2026}
 }
 ```
 
