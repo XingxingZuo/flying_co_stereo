@@ -1,0 +1,9 @@
+root_path: "/home/zph/ros_ws/vio_ws/src/DepthAlign/datasets/paris-v2/" # change to your own path
+time_img_predict_depth_grayscale_path: "images/kun0_raw_color_predict_depth/"
+time_img_predict_depth_colored_path: "images/kun0_raw_color_predict_depth_colored/"
+time_img_raw_path: "images/kun0_raw_color/"
+lmd_pose_path: "landmarks/features_collaborative_with_vio_A.txt" # features_collaborative_with_vio_A.txt  features_collaborative.txt  features_vio_landmarks_A.txt
+output_lmd_pose_path: "results/recover_dense_landmark_pose_collab_with_vio_A_fit.txt" # recover_dense_landmark_pose_collab_with_vio_A.txt recover_dense_landmark_pose_collab.txt  recover_dense_landmark_pose_vio_A.txt
+output_xy_fit_path: "xy_fit/"
+output_img_path: "results/output_img_collab_and_master/"
+color_or_infra: "color" # color or infra1

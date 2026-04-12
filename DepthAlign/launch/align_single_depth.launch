@@ -1,0 +1,4 @@
+<launch>
+    <rosparam command="load" file="$(find depth_align)/cfg/DepthAlign/single_time_Paris_Env_Collab_depth_align.yaml" />
+    <node name="depth_align_node" pkg="depth_align" type="depth_align_node" output="screen" required="true"/>
+</launch>
